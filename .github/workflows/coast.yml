@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  potential:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        towel: ["divine", "silly", "elaborate", "float", "slight"]
+        thirsty: ["spite", "alarm", "resist", "thumb"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar qD
